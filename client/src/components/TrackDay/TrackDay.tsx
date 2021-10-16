@@ -1,7 +1,7 @@
-import styles from './Trackday.module.css'
+import styles from './Trackday.module.css';
 
-const TrackDay = () => {
-  return <div className={styles.root}>track days</div>
-}
+const TrackDay = (): JSX.Element => {
+  return <div className={styles.root}>track days</div>;
+};
 
 export default TrackDay;

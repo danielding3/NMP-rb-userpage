@@ -2,9 +2,9 @@ import './App.css';
 import Car from './components/Car/Car';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
-import Teams from './components/Team/Teams'
+import Teams from './components/Team/Teams';
 import TrackDay from './components/TrackDay/TrackDay';
-function App() {
+function App(): JSX.Element {
   return (
     <div className="App">
       <Navbar />

@@ -1,7 +1,7 @@
-import styles from './Profile.module.css'
+import styles from './Profile.module.css';
 
-const Profile = () => {
-  return <div className={styles.root}>profile</div>
-}
+const Profile = (): JSX.Element => {
+  return <div className={styles.root}>profile</div>;
+};
 
 export default Profile;

@@ -1,7 +1,7 @@
-import styles from "./Team.module.css"
+import styles from './Team.module.css';
 
-const Teams = () => {
-  return <div className={styles.root}>teams</div>
-}
+const Teams = (): JSX.Element => {
+  return <div className={styles.root}>teams</div>;
+};
 
-export default Teams
+export default Teams;
