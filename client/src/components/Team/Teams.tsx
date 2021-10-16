@@ -1,7 +1,27 @@
+import { Typography } from '@mui/material';
 import styles from './Team.module.css';
+import { StyledEngineProvider } from '@mui/material/styles';
+import Team from './Team';
 
+const teams = [
+  {
+    logo: 'redback.jpg',
+    name: 'Redback Racing',
+    status: 'Accept invite',
+  },
+];
 const Teams = (): JSX.Element => {
-  return <div className={styles.root}>teams</div>;
+  return (
+    <StyledEngineProvider injectFirst>
+      <div className={styles.root}>
+        <Typography className={styles.title}>TEAMS</Typography>
+        {teams.map((team, idx) => {
+          return <Team name={team.name} status={team.status} key={idx} />;
+        })}
+        <Team name="Start a team..." />
+      </div>
+    </StyledEngineProvider>
+  );
 };
 
 export default Teams;
