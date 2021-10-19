@@ -3,12 +3,18 @@ import styles from './Team.module.css';
 
 interface Info {
   //logo: String;
-  name: String;
-  status?: String;
+  name: string;
+  status?: string;
   id?: string;
+  logo?: string;
 }
 
-const Team: React.FC<Info> = ({ name, status = '', id }: Info): JSX.Element => {
+const Team: React.FC<Info> = ({
+  name,
+  status,
+  id,
+  logo,
+}: Info): JSX.Element => {
   const [isMember, setIsMember] = React.useState(false);
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>): void => {
@@ -20,7 +26,7 @@ const Team: React.FC<Info> = ({ name, status = '', id }: Info): JSX.Element => {
   return (
     <div className={styles.teamCard}>
       <div className={styles.leftContainer}>
-        {/* <img src={logo} alt="team logo" /> */}
+        {logo && <img src={`images/${logo}.png`} alt="team logo" />}
       </div>
       <div className={styles.rightContainer}>
         <div className={styles.name}>{name}</div>
