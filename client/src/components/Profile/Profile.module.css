@@ -36,3 +36,25 @@
   color:#0157f0;
   font-size: 14px;
 }
+
+/* profile edit dialog */
+
+.title {
+  /* background-color: black; */
+  /* color: white; */
+  text-align: center;
+}
+
+.name {
+  border: 1px solid white;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* .content {
+  background-color: black;
+} */
+
+.divider {
+  background-color: white;
+}
