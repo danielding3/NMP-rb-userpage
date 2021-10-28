@@ -1,0 +1,21 @@
+.gridContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #1F1F1F;
+    margin: 10px 0px 10px 0px;
+    border-radius: 5px;
+}
+
+.cell {
+    min-width: 150px;
+    text-align: left;
+}
+.cellLast {
+    min-width: 150px;
+    text-align: right;
+}
+.bold {
+    font-weight: bold;
+}
+
