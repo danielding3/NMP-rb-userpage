@@ -1,0 +1,12 @@
+.root {
+    color: #FFFFFF;
+  }
+
+.addButton {
+    margin: 10px;
+    padding: 10px;
+    background-color: #1F1F1F;
+    border-radius: 5px;
+    height:110px;
+    width: 200px;
+  }

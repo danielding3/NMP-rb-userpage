@@ -1,0 +1,17 @@
+.root {
+  color: #A1A1A1;
+}
+
+.textLink {
+    color: #2457F0;
+    cursor: pointer;
+  
+  }
+
+
+.cardPlaceholder {
+  background-color: #1F1F1F;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  
+}
