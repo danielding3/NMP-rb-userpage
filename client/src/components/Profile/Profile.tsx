@@ -7,12 +7,21 @@ import ProfileEdit from './ProfileEdit';
 
 const Profile = (): JSX.Element => {
   const [isEditProfile, setIsEditProfile] = React.useState(false);
+  const [username, setUsername] = React.useState('Jane Doe');
+  const [profile, setProfile] = React.useState(pic);
 
   const handleOpen = (): void => {
     setIsEditProfile(true);
   };
 
-  const handleClose = (): void => {
+  const handleClose = (name: string, photo: string): void => {
+    if (name) {
+      setUsername(name);
+    }
+
+    if (photo) {
+      setProfile(photo);
+    }
     setIsEditProfile(false);
   };
 
@@ -20,10 +29,10 @@ const Profile = (): JSX.Element => {
     <StyledEngineProvider injectFirst>
       <div className={styles.root}>
         <div className={styles.picContainer}>
-          <img src={pic} alt="profile picture" className={styles.pic} />
+          <img src={profile} alt="profile picture" className={styles.pic} />
         </div>
         <div className={styles.infoContainer}>
-          <div className={styles.username}>Jane Doe</div>
+          <div className={styles.username}>{username}</div>
           <div className={styles.updateProfile}>
             <Button
               variant="text"
