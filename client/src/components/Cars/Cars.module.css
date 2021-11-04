@@ -11,14 +11,13 @@
 
 h2 {
   text-align: left;
-
 }
 .carsContainer {
   padding: 10px;
 }
 
 .carsWrapper {
-  width:100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
 }

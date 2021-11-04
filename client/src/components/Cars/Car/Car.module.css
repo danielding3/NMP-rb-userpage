@@ -1,27 +1,25 @@
 .cardImg {
-    display: inline-block;
-    border-radius: 5px;
-    width: 200px;
-    max-height: 110px;
+  display: inline-block;
+  border-radius: 5px;
+  width: 200px;
+  max-height: 110px;
 }
 
-.carCard{
-    margin:10px 10px 10px 0px;
-    width: 100%;
+.carCard {
+  margin: 10px 10px 10px 0px;
+  width: 100%;
 
-
-    text-align:start;
-    display: flex;
-    flex-direction: column;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
 }
 
 .carTitle {
-    padding: 10px 0px 5px 0px;
-    color: #FFFFFF;
+  padding: 10px 0px 5px 0px;
+  color: #ffffff;
 }
 .carTeam {
-    padding: 5px 0px 5px 0px;
-    color: #737373;
-    font-size: 0.8em;
+  padding: 5px 0px 5px 0px;
+  color: #737373;
+  font-size: 0.8em;
 }
-
