@@ -1,9 +1,9 @@
 import './App.css';
-import Car from 'components/Car/Car';
-import Navbar from 'components/Navbar/Navbar';
-import Profile from 'components/Profile/Profile';
-import Teams from 'components/Team/Teams';
-import TrackDay from 'components/TrackDay/TrackDay';
+import Cars from './components/Cars/Cars';
+import Navbar from './components/Navbar/Navbar';
+import Profile from './components/Profile/Profile';
+import Teams from './components/Team/Teams';
+import TrackDays from './components/TrackDays/TrackDays';
 function App(): JSX.Element {
   return (
     <div className="App">
@@ -14,8 +14,8 @@ function App(): JSX.Element {
           <Teams />
         </div>
         <div className="rightContainer">
-          <Car />
-          <TrackDay />
+          <Cars />
+          <TrackDays />
         </div>
       </div>
     </div>

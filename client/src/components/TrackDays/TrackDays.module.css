@@ -1,0 +1,14 @@
+.root {
+  flex: 3;
+  border: 1px black solid;
+  color: white;
+}
+
+.container {
+  padding: 10px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 18px;
+}
