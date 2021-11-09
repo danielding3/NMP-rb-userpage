@@ -6,12 +6,13 @@ import { AiOutlinePlus } from 'react-icons/ai';
 interface Props {
   className: string;
   displayText: string;
+  handleClickOpen: () => void;
 }
 
-const AddCard: React.FC<Props> = ({ displayText }) => {
+const AddCard: React.FC<Props> = ({ displayText, handleClickOpen }) => {
   return (
     <div className={styles.root}>
-      <button className={styles.addButton}>
+      <button onClick={handleClickOpen} className={styles.addButton}>
         <IconContext.Provider value={{ color: '#2457F0', size: '50px' }}>
           <AiOutlinePlus />
         </IconContext.Provider>

@@ -4,11 +4,13 @@ import Car from './Car/Car';
 import CardPlaceholder from '../CardPlaceholder/CardPlaceholder';
 import AddCard from '../AddCard/AddCard';
 import { v4 as uuidv4 } from 'uuid';
+import AddCarDialog from './AddCarDialog';
 // import img_mcqueen from '../../public/lightning-mcqueen.png'
 // import img_rb17 from '../../public/rb17.jpg'
 
 const Cars: React.FC = (): JSX.Element => {
-  const [carView, setCarView] = useState<Boolean>(false);
+  const [carView, setCarView] = useState<boolean>(false);
+  const [openDialog, setOpenDialog] = useState<boolean>(false);
 
   const cars = [
     {
@@ -27,22 +29,34 @@ const Cars: React.FC = (): JSX.Element => {
     },
   ];
   const carsList = cars.map((car) => <Car key={uuidv4()} car={car}></Car>);
-  carsList.push(<AddCard className={styles.addCard} displayText={'car'} />);
+  //carsList.push(<AddCard className={styles.addCard} displayText={'car'} />);
 
   const carVisibilityHandler = (e: React.MouseEvent<HTMLSpanElement>): void => {
     setCarView(true);
   };
+  const handleClickOpen = (): void => {
+    setOpenDialog(true);
+  };
+  const handleClose = (): void => {
+    setOpenDialog(false);
+  };
 
   return (
     <div className={styles.root}>
-      <div></div>
-
       <div className={styles.carsContainer}>
         <h2 className={styles.leftAlign}>MY CARS</h2>
         {carView ? (
           <div className={styles.carsWrapper}>
             {carsList}
-            {/* <AddCard displayText={"car"}/> */}
+
+            <AddCard
+              handleClickOpen={handleClickOpen}
+              className={styles.addCard}
+              displayText={'car'}
+            />
+            {openDialog ? (
+              <AddCarDialog open={openDialog} onClose={handleClose} />
+            ) : null}
           </div>
         ) : (
           <CardPlaceholder
