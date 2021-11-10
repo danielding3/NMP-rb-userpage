@@ -1,27 +1,17 @@
 import styles from './Navbar.module.css';
-import React from 'react';
+import logo from 'assets/logo.png';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import StyledEngineProvider from '@mui/material/StyledEngineProvider';
 
 const Navbar = (): JSX.Element => {
   return (
-    <div className={styles.root}>
-      <div>
-        <img src="images/logo.png" />
-        <nav>
-          <ul>
-            <li>
-              <a href="">HOME</a>
-            </li>
-            <li>
-              <a href="">REGION</a>
-            </li>
-            <li>
-              <a href="">ABOUT</a>
-            </li>
-          </ul>
-        </nav>
+    <StyledEngineProvider injectFirst>
+      <div className={styles.root}>
+        <img src={logo} />
         <img src="images/menu.png" />
+        <NotificationsNoneIcon className={styles.bellIcon} />
       </div>
-    </div>
+    </StyledEngineProvider>
   );
 };
 
