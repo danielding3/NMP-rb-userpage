@@ -7,7 +7,11 @@ import { v4 as uuidv4 } from 'uuid';
 // import img_mcqueen from '../../public/lightning-mcqueen.png'
 // import img_rb17 from '../../public/rb17.jpg'
 
-const Cars: React.FC = (): JSX.Element => {
+interface Prop {
+  isMember: boolean;
+}
+
+const Cars: React.FC<Prop> = ({ isMember }): JSX.Element => {
   const [carView, setCarView] = useState<Boolean>(false);
 
   const cars = [
@@ -30,7 +34,11 @@ const Cars: React.FC = (): JSX.Element => {
   carsList.push(<AddCard className={styles.addCard} displayText={'car'} />);
 
   const carVisibilityHandler = (e: React.MouseEvent<HTMLSpanElement>): void => {
-    setCarView(true);
+    if (!isMember) {
+      alert('Please accept the invitation first.');
+    } else {
+      setCarView(true);
+    }
   };
 
   return (

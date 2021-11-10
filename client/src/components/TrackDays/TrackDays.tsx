@@ -5,7 +5,11 @@ import CardPlaceholder from '../CardPlaceholder/CardPlaceholder';
 import { v4 as uuidv4 } from 'uuid';
 import TrackDayHeader from './TrackDay/TrackDayHeader';
 
-const TrackDays: React.FC = () => {
+interface Prop {
+  isMember: boolean;
+}
+
+const TrackDays: React.FC<Prop> = ({ isMember }) => {
   const [showTrackDays, setShowTrackDays] = useState(false);
   const trackdays = [
     {
@@ -26,7 +30,11 @@ const TrackDays: React.FC = () => {
     <TrackDay key={uuidv4()} trackday={trackday} />
   ));
   const trackDayVisibilityHandler = (): void => {
-    setShowTrackDays(true);
+    if (!isMember) {
+      alert('Please accept the invitation first.');
+    } else {
+      setShowTrackDays(true);
+    }
   };
 
   return (

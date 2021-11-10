@@ -4,6 +4,11 @@ import styles from './Team.module.css';
 import { StyledEngineProvider } from '@mui/material/styles';
 import Team from './Team';
 
+interface Info {
+  isMember: boolean;
+  setIsMember: (isMember: boolean) => void;
+}
+
 const teams = [
   {
     logo: 'redback',
@@ -11,7 +16,7 @@ const teams = [
     status: 'Accept invite',
   },
 ];
-const Teams = (): JSX.Element => {
+const Teams: React.FC<Info> = ({ isMember, setIsMember }): JSX.Element => {
   return (
     <StyledEngineProvider injectFirst>
       <div className={styles.root}>
@@ -23,6 +28,8 @@ const Teams = (): JSX.Element => {
               status={team.status}
               logo={team.logo}
               key={idx}
+              isMember={isMember}
+              setIsMember={setIsMember}
             />
           );
         })}

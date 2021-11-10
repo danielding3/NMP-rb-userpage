@@ -7,6 +7,8 @@ interface Info {
   status?: string;
   id?: string;
   logo?: string;
+  isMember?: boolean;
+  setIsMember?: (isMember: boolean) => void;
 }
 
 const Team: React.FC<Info> = ({
@@ -14,12 +16,14 @@ const Team: React.FC<Info> = ({
   status,
   id,
   logo,
+  isMember,
+  setIsMember,
 }: Info): JSX.Element => {
-  const [isMember, setIsMember] = React.useState(false);
-
   const handleClick = (e: React.MouseEvent<HTMLDivElement>): void => {
     if (!isMember) {
-      setIsMember(true);
+      if (setIsMember != null) {
+        setIsMember(true);
+      }
     }
   };
 
