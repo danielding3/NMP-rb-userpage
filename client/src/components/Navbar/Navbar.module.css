@@ -1,11 +1,15 @@
 .root {
-  height: 50px;
+  height: 60px;
   width: 100%;
   background-color: #151515;
+  align-items: right;
+  align-self: right;
 }
 
 .bellIcon {
+  margin-top: 20px;
   color: white;
+  width: 50px;
 }
 
 *{
@@ -35,14 +39,24 @@
   width: 50px;
   height: 50px;
   cursor: pointer;
+  align-items: left;
 }
 
-.menuicon{
-  margin-top: 5%;
-  width: 30px;
-  height: 50px;
-  cursor: pointer;
-  margin-left: 40px;
+.menuIcon{
+  width: 50px;
+  align-self: left;
+  color: white;
+
+}
+
+.carIcon{
+  width: 50px;
+  color: white;
+}
+
+.personIcon{
+  width: 50px;
+  color: white;
 }
 
 nav{
