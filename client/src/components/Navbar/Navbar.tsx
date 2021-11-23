@@ -1,6 +1,9 @@
 import styles from './Navbar.module.css';
 import logo from 'assets/logo.png';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import DirectionsCarFilledOutlinedIcon from '@mui/icons-material/DirectionsCarFilledOutlined';
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import MenuIcon from '@mui/icons-material/Menu';
 import StyledEngineProvider from '@mui/material/StyledEngineProvider';
 
 // this is how u can use a image
@@ -13,8 +16,10 @@ const Navbar = (): JSX.Element => {
     <StyledEngineProvider injectFirst>
       <div className={styles.root}>
         <img src={logo} />
-        <img src="images/menu.png" />
         <NotificationsNoneIcon className={styles.bellIcon} />
+        <MenuIcon className={styles.menuIcon} />
+        <DirectionsCarFilledOutlinedIcon className={styles.carIcon} />
+        <PersonOutlineOutlinedIcon className={styles.personIcon} />
       </div>
     </StyledEngineProvider>
   );
