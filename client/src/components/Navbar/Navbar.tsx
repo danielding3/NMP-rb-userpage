@@ -15,11 +15,18 @@ const Navbar = (): JSX.Element => {
   return (
     <StyledEngineProvider injectFirst>
       <div className={styles.root}>
+      <MenuIcon className={styles.menuIcon} />
         <img src={logo} />
-        <NotificationsNoneIcon className={styles.bellIcon} />
-        <MenuIcon className={styles.menuIcon} />
-        <DirectionsCarFilledOutlinedIcon className={styles.carIcon} />
-        <PersonOutlineOutlinedIcon className={styles.personIcon} />
+        <div className={styles.searchBar}>
+          <p>
+            Search
+          </p>
+        </div>
+        <div className={styles.icons}>
+          <NotificationsNoneIcon className={styles.bellIcon} />
+          <DirectionsCarFilledOutlinedIcon className={styles.carIcon} />
+          <PersonOutlineOutlinedIcon className={styles.personIcon} />
+        </div>
       </div>
     </StyledEngineProvider>
   );
