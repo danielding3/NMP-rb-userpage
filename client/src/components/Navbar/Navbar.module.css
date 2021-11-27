@@ -15,8 +15,9 @@
 
 .logo {
   margin-right: 20px;
+  height: 30px;
+  width: 30px;
 }
-
 
 .myAccount {
   font-family: sans-serif;
