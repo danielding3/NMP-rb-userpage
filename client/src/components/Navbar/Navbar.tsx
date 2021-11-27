@@ -3,8 +3,8 @@ import logo from 'assets/logo.png';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import DirectionsCarFilledOutlinedIcon from '@mui/icons-material/DirectionsCarFilledOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
-import MenuIcon from '@mui/icons-material/Menu';
 import StyledEngineProvider from '@mui/material/StyledEngineProvider';
+import SearchIcon from '@mui/icons-material/Search';
 
 // this is how u can use a image
 // add image to assets folder
@@ -15,14 +15,16 @@ const Navbar = (): JSX.Element => {
   return (
     <StyledEngineProvider injectFirst>
       <div className={styles.root}>
-      <MenuIcon className={styles.menuIcon} />
-        <img src={logo} />
-        <div className={styles.searchBar}>
-          <p>
-            Search
-          </p>
+        <div className={styles.leftHeader}>
+          <img src={logo} className={styles.logo} />
+          <h1 className={styles.myAccount}>My Account</h1>
         </div>
+
         <div className={styles.icons}>
+          <div className={styles.searchBar}>
+            <SearchIcon className={styles.searchIcon} />
+            <span className={styles.search}>Search</span>
+          </div>
           <NotificationsNoneIcon className={styles.bellIcon} />
           <DirectionsCarFilledOutlinedIcon className={styles.carIcon} />
           <PersonOutlineOutlinedIcon className={styles.personIcon} />

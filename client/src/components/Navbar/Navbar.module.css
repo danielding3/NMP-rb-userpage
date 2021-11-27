@@ -1,97 +1,72 @@
 .root {
-  padding-top: 10px;
-  padding-left: 50px;
   height: 60px;
   width: 100%;
   background-color: #151515;
   display: flex;
-  align-items: left;
-
+  align-items: center;
+  justify-content: space-between;
 }
+
+.leftHeader {
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+
+.myAccount {
+  font-family: sans-serif;
+  color: #ffffff;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.searchBar {
+  width: 236px;
+  height: 33px;
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 2px;
+}
+
+.searchIcon {
+  font-size: 25px;
+  margin-left: 8px;
+  margin-right: 8px;
+  color: gray;
+}
+
+.search {
+  font-size: 13px;
+  color: gray;
+}
+
 .icons {
-  height: 50px;
   background-color: #151515;
   display: flex;
-  right: 0; 
-  position: absolute;
+  width: 30%;
+  justify-content: space-between;
+  margin-right: 20px;
+  align-items: center;
+  max-width: 350px;
 }
+
 .bellIcon {
   color: white;
-  width: 60px;
   align-items: right;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-}
-.container{
-  width: 100%;
-  height: 10vh;
-  background-color: white;
-  background-position: center;
-  background-size: cover;
-  padding-left: 8%;
-  padding-right: 8%;
-  box-sizing: border-box;
-}
-.navbar{
-  height: 12%;
-  display: flex;
-  align-items: centre;
-
-}
-
-.logo{
-  margin-top: 5%;
-  width: 60px;
-  height: 50px;
-  cursor: pointer;
-  align-items: left;
-}
-.searchBar {
-  width: 10%;
-  height: 2vh;
-  padding-left: 10px;
-  margin-left: 10px;
-  background-color: #1F1F1F;
-  display: flex;
-  align-self: right;
-  text-align: center;
-  text-emphasis-color: white;
-}
-.menuIcon{
-  width: 50px;
-  align-self: left;
-  color: white;
-
-}
-
 .carIcon{
-  width: 60px;
   color: white;
 }
 
 .personIcon{
-  width: 60px;
   color: white;
 }
-
-nav{
-  flex: 1;
-  text-align: left; 
-}
-
-nav ul li{ 
-  margin-top: 5%;
-  list-style: none;
-  display: inline-block;
-  margin-left: 60px; 
-}
-nav ul li a{
-  text-decoration: none;
-  color: #ffffff
-  font-size 15px;
-}
-
