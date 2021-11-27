@@ -30,7 +30,13 @@ const Team: React.FC<Info> = ({
   return (
     <div className={styles.teamCard}>
       <div className={styles.leftContainer}>
-        {logo && <img src={`images/${logo}.png`} alt="team logo" />}
+        {logo && (
+          <img
+            src={`images/${logo}.png`}
+            alt="team logo"
+            className={styles.imgLogo}
+          />
+        )}
       </div>
       <div className={styles.rightContainer}>
         <div className={styles.name}>{name}</div>
