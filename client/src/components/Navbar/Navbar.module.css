@@ -1,3 +1,72 @@
 .root {
-  height: 50px;
+  height: 60px;
+  width: 100%;
+  background-color: #151515;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftHeader {
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+
+.myAccount {
+  font-family: sans-serif;
+  color: #ffffff;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.searchBar {
+  width: 236px;
+  height: 33px;
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 2px;
+}
+
+.searchIcon {
+  font-size: 25px;
+  margin-left: 8px;
+  margin-right: 8px;
+  color: gray;
+}
+
+.search {
+  font-size: 13px;
+  color: gray;
+}
+
+.icons {
+  background-color: #151515;
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+  margin-right: 20px;
+  align-items: center;
+  max-width: 350px;
+}
+
+.bellIcon {
+  color: white;
+  align-items: right;
+}
+
+.carIcon{
+  color: white;
+}
+
+.personIcon{
+  color: white;
 }
